@@ -1,8 +1,8 @@
-from sqlmodel import create_engine, Session
-from .config import DATABASE_URL
+from supabase import create_client, Client
+from .config import SUPABASE_URL, SUPABASE_KEY
 
-engine = create_engine(DATABASE_URL)
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-def get_db():
-    with Session(engine) as session:
-        yield session
+
+def get_supabase():
+    return supabase

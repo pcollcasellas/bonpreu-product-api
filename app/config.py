@@ -1,3 +1,7 @@
 import os
+from dotenv import load_dotenv
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:yBjLRUNei0xaGIi@localhost/bonpreu")
+load_dotenv()
+
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")

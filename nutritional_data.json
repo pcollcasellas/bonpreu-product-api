@@ -1,0 +1,81 @@
+[
+    [
+        {
+            "product_id": 214,
+            "productNutritionalData": "Anàlisi química",
+            "productNutritionalQuantity": "(mg/l)"
+        },
+        {
+            "product_id": 214,
+            "productNutritionalData": "Residu sec",
+            "productNutritionalQuantity": "234"
+        },
+        {
+            "product_id": 214,
+            "productNutritionalData": "Calci",
+            "productNutritionalQuantity": "90,4"
+        },
+        {
+            "product_id": 214,
+            "productNutritionalData": "Sodi",
+            "productNutritionalQuantity": "0,63"
+        },
+        {
+            "product_id": 214,
+            "productNutritionalData": "Magnesi",
+            "productNutritionalQuantity": "1,38"
+        },
+        {
+            "product_id": 214,
+            "productNutritionalData": "Bicarbonats",
+            "productNutritionalQuantity": "256"
+        },
+        {
+            "product_id": 214,
+            "productNutritionalData": "Sulfats",
+            "productNutritionalQuantity": "3,04"
+        },
+        {
+            "product_id": 214,
+            "productNutritionalData": "Clorurs",
+            "productNutritionalQuantity": "1,02"
+        }
+    ],
+    [
+        {
+            "product_id": 215,
+            "productNutritionalData": "Components analítics:",
+            "productNutritionalQuantity": null
+        },
+        {
+            "product_id": 215,
+            "productNutritionalData": "Proteïna bruta",
+            "productNutritionalQuantity": "28%"
+        },
+        {
+            "product_id": 215,
+            "productNutritionalData": "Grassa bruta",
+            "productNutritionalQuantity": "19%"
+        },
+        {
+            "product_id": 215,
+            "productNutritionalData": "Fibres brutes",
+            "productNutritionalQuantity": "2,5%"
+        },
+        {
+            "product_id": 215,
+            "productNutritionalData": "Cendra bruta",
+            "productNutritionalQuantity": "7%"
+        },
+        {
+            "product_id": 215,
+            "productNutritionalData": "Omega 3",
+            "productNutritionalQuantity": "0,3%"
+        },
+        {
+            "product_id": 215,
+            "productNutritionalData": "Omega 6",
+            "productNutritionalQuantity": "3,4%"
+        }
+    ]
+]

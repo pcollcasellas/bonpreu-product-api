@@ -1,27 +1,35 @@
-import pandas as pd
-import requests
-from fastapi import Depends, FastAPI, HTTPException
-from sqlmodel import Session, SQLModel
-import json
-
-from .database import engine, get_db
-from .import_module.crud import insert_ids
-from .import_module.service import fetch_product_ids, fetch_product_data
+from dotenv import load_dotenv
+from fastapi import FastAPI
+import os
+from .database import supabase
+from .import_module.crud import (
+    get_product_ids,
+    insert_ids,
+    insert_product_nutritional_data,
+    insert_products,
+)
+from .import_module.service import (
+    fetch_all_products_data,
+    fetch_product_ids,
+)
 
 app = FastAPI()
 
 
-SQLModel.metadata.create_all(bind=engine)
+@app.get("/get_products_info")
+async def get_product():
+    product_ids = get_product_ids()
+    print(len(product_ids))
+
+    products, products_nutritional_data = await fetch_all_products_data(product_ids)
+
+    products_result = insert_products(products)
+    insert_product_nutritional_data(products_nutritional_data)
+    return {"status": "success", "inserted": len(products_result)}
 
 
-@app.get("/")
-def get_product():
-    product = fetch_product_data(25535)
-    print(product)
-
-
-@app.get("/insert_urls")
-def get_ids_list(db: Session = Depends(get_db)):
-    item_ids = fetch_product_ids()()
-    print(item_ids)
-    insert_ids(db, item_ids)
+@app.get("/insert_ids")
+def get_ids_list():
+    item_ids = fetch_product_ids()
+    insert_ids(item_ids)
+    return {"status": "success", "inserted_ids": len(item_ids)}
