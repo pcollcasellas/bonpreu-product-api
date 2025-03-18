@@ -14,6 +14,7 @@ from app.import_module.utils import parse_nutritional_data_table
 from .models import ItemIds, Products, ProductNutritionalData
 
 
+# Test de push a github
 def fetch_product_ids() -> list[ItemIds]:
     """
     Fetches product Ids from the sitemap XML.
