@@ -37,6 +37,7 @@ class Products(Base):
     product_unit_price_amount: Decimal = Field(max_digits=10, decimal_places=2)
     product_unit_price_currency: str
     product_unit_price_unit: str
+
     product_available: bool
     product_alcohol: bool
     product_cooking_guidelines: str
